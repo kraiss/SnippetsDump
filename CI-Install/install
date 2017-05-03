@@ -1,22 +1,37 @@
-// Install Java 8
+## Install Java 8
 sudo apt-get install python-software-properties
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 
-// Install Maven 3
+## Install Maven 3
 sudo apt-get purge maven maven2 maven3
 sudo add-apt-repository ppa:andrei-pozolotin/maven3
 sudo apt-get update
 sudo apt-get install maven3
 
-// Install Jenkins
+## Install NPM
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+  ## RESTART TERM
+nvm --version
+nvm install node ## Or for lts version 'nvm install --lts'
+nvm listcl
+
+## Install Git
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git
+
+## Install Jenkins
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins
 
-// Install SonarQube
+## Install SonarQube
 deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/
 sudo apt-get update
 sudo apt-get install sonar
